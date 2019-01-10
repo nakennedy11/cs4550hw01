@@ -1,0 +1,15 @@
+server
+{
+       listen 80 default_server;
+       listen [::]:80 default_server;
+
+       root /home/noahkennedy.xyz;
+
+       index index.html;
+
+       server_name noahkennedy.xyz www.noahkennedy.xyz;
+
+       location / {
+         try_files $uri $uri/ =404;
+       }
+}
